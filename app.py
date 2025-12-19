@@ -548,7 +548,7 @@ SUPER_ADMIN_HTML = """
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>超级管理员后台</title>
+    <title>超级管理员后台由idkwhatismyname创建</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1, h2 { color: #333; }
@@ -837,7 +837,7 @@ def add_app():
         "allowedSn": app_data_allowed_sn,
 
         "versionName": "1.0", "versionCode": "1000", "updateTime": str(int(time.time() * 1000)),
-        "status": 1, "category": "教育", "publisher": "用户添加",
+        "status": 1, "category": "教育", "publisher": "由idkwhatismyname创建",
         "tags": [{"name":"通用","bgColor":"#FFF2D0","textColor":"#C1A161"}], "version": "1.0", "score": 5.0, "changelog": "首次添加。", "enName": "",
     }
 
@@ -1044,7 +1044,7 @@ def apk_details():
 def system_apps_list(): return api_response_search(load_apps())
 @app.route("/iot-study/appStore/getAutoUpdateList", methods=["POST"])
 def auto_update_list(): return api_response_search(load_apps())
-# 🌟 V29 核心修改：强制关闭推荐应用列表
+
 @app.route("/iot-study/appStore/recommend/appList", methods=["POST"])
 def recommend_app_list(): return api_response_search([]) # 强制返回空列表
 @app.route("/iot-study/appStore/report", methods=["POST"])
